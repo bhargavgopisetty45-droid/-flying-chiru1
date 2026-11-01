@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #17344b;
+  background: #edf9ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% 5%, rgba(255,255,255,.95), transparent 36%),
+    linear-gradient(145deg, #e8f8ff, #d7f1ff 55%, #effaff);
+}
+button { font: inherit; }
+.page {
+  width: min(100%, 620px);
+  margin: 0 auto;
+  padding: 22px 16px 30px;
+}
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 14px;
+  width: min(100%, 460px);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  color: #1d5b7d;
+}
+.brandbird {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #ffcf59;
+  color: #fff;
+  font-size: 19px;
+  box-shadow: 0 4px 0 #e5ac35;
+}
+.soundbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #c9e7f4;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,.8);
+  color: #2b6582;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+}
+.gameShell {
+  width: min(100%, 460px);
+  margin: auto;
+  padding: 12px;
+  border: 1px solid rgba(127, 191, 218, .55);
+  border-radius: 26px;
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 18px 50px rgba(46, 128, 169, .17), 0 4px 0 rgba(91, 169, 204, .18);
+}
+.scorebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 8px 10px;
+}
+.scorebar > div { display: flex; align-items: baseline; gap: 8px; }
+.scorelabel { font-size: 10px; font-weight: 900; letter-spacing: 1.5px; color: #83a7b8; }
+.scorebar strong { font-size: 23px; line-height: 1; color: #245b78; }
+.scorebar .best strong { color: #e5a633; }
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 17px;
+  touch-action: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+}
+.gameFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 7px 2px;
+  color: #7b9eaf;
+  font-size: 11px;
+  font-weight: 800;
+}
+.hint {
+  text-align: center;
+  color: #6b91a5;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 18px 0 0;
+}
+@media (max-width: 420px) {
+  .page { padding: 14px 10px 24px; }
+  .gameShell { padding: 8px; border-radius: 20px; }
+  .topline { padding: 0 3px; }
+  .brand { font-size: 13px; letter-spacing: 1px; }
+  .soundbtn { padding: 7px 10px; }
+}
